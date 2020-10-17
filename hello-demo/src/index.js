@@ -23,7 +23,7 @@ function tick(){
             <hr />
             <Hello2 date={new Date()} />
             <hr />
-            <Hello3 date={new Date()} />
+            <Hello3 date={new Date()} score={90} />
         </React.StrictMode>,
         document.getElementById('example')
     );
