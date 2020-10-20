@@ -5,9 +5,9 @@ import App from './App';
 import Hello from './example/Hello';
 import Hello2 from './example/Hello2';
 import Hello3 from './example/Hello3';
-
-
+import Greeting from "./example/Greeting";
 import * as serviceWorker from './serviceWorker';
+import NumberList from "./example/NumberList";
 
 ReactDOM.render(
     <React.StrictMode>
@@ -16,9 +16,11 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-Hello3.defaultProps={
-    name : '中国人'
+Hello3.defaultProps = {
+    name: '中国人'
 }
+
+const numbers = [1, 2, 3, 4, 5];
 
 const tickElement =
     <div>
@@ -27,16 +29,18 @@ const tickElement =
         <Hello2 date={new Date()}/>
         <hr/>
         <Hello3 score={90}/>
+        <Greeting isLoggedIn={true}></Greeting>
+        <NumberList numbers={numbers}></NumberList>
     </div>
-    /*严格模式*/
-    /*React在严格模式下会执行两次render以帮忙检查额外的副作用*/
-    // <React.StrictMode>
-    //     <Hello/>
-    //     <hr/>
-    //     <Hello2 date={new Date()}/>
-    //     <hr/>
-    //     <Hello3 date={new Date()} score={90}/>
-    // </React.StrictMode>
+/*严格模式*/
+/*React在严格模式下会执行两次render以帮忙检查额外的副作用*/
+// <React.StrictMode>
+//     <Hello/>
+//     <hr/>
+//     <Hello2 date={new Date()}/>
+//     <hr/>
+//     <Hello3 date={new Date()} score={90}/>
+// </React.StrictMode>
 
 function tick() {
     ReactDOM.render(

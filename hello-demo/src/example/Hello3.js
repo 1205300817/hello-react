@@ -74,7 +74,7 @@ export default class Clock extends React.Component {
         console.log(b());
 
         // 箭头函数递归
-        let fact = (x) => (x == 0 ? 1 : x * fact(x - 1));
+        let fact = (x) => (x === 0 ? 1 : x * fact(x - 1));
         console.log("箭头函数递归测试------------")
         console.log(fact(5));
 
